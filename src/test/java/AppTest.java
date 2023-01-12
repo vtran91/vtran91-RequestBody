@@ -1,4 +1,4 @@
-package com.revature;
+
 
 import org.junit.After;
 import org.junit.Assert;
@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.util.CommandLine;
+import util.CommandLine;
 
 import io.javalin.Javalin;
 
@@ -35,7 +35,7 @@ public class AppTest
     {
         String expectedResult = "Beatles";
 
-        String actualResult = CommandLine.executeCommandPrompt("curl -X Post -d @./src/test/java/com/revature/util/prob1a.json http://localhost:9001/problem1");
+        String actualResult = CommandLine.executeCommandPrompt("curl -X Post -d @./src/test/java/util/prob1a.json http://localhost:9001/problem1");
     
         if(actualResult.isEmpty()){
             Assert.fail("No response from server");
@@ -51,7 +51,7 @@ public class AppTest
     {
         String expectedResult = "Rolling Stones";
 
-        String actualResult = CommandLine.executeCommandPrompt("curl -X Post -d @./src/test/java/com/revature/util/prob1b.json http://localhost:9001/problem1");
+        String actualResult = CommandLine.executeCommandPrompt("curl -X Post -d @./src/test/java/util/prob1b.json http://localhost:9001/problem1");
     
         if(actualResult.isEmpty()){
             Assert.fail("No response from server");
@@ -70,7 +70,7 @@ public class AppTest
 
         Song actualResult;
         try {
-            actualResult = om.readValue(CommandLine.executeCommandPrompt("curl -X Post -d @./src/test/java/com/revature/util/prob1b.json http://localhost:9001/problem2"),Song.class);
+            actualResult = om.readValue(CommandLine.executeCommandPrompt("curl -X Post -d @./src/test/java/util/prob1b.json http://localhost:9001/problem2"),Song.class);
         
             if(actualResult == null){
                 Assert.fail("No response from server");

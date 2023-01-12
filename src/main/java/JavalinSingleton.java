@@ -1,4 +1,4 @@
-package com.revature;
+
 
 import io.javalin.Javalin;
 
@@ -17,7 +17,9 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem1", ctx -> {
-                //implement logic here
+            
+            //implement logic here
+                
         });
 
         /**
@@ -28,7 +30,9 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem2", ctx -> {
-               //implement logic here
+               
+            //implement logic here
+               
         });
 
 
