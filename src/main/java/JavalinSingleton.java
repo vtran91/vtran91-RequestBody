@@ -15,7 +15,8 @@ public class JavalinSingleton {
         ObjectMapper om = new ObjectMapper();
         
         /**
-         * problem1: retrieve the song object from the request body and return the song object.
+         * problem1: retrieve the song object from the request body...
+         *      1. return the song object as JSON in the response body.
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance.
          */
@@ -28,7 +29,7 @@ public class JavalinSingleton {
         /**
          * problem2: retrieve the song object from the request body...
          *      1. update the artist in the song object to "Beatles"
-         *      2. return the updated song object in the response body
+         *      2. return the updated song object as JSON in the response body
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance.
          */
